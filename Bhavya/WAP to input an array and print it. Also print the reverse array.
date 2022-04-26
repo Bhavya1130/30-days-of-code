@@ -1,0 +1,36 @@
+#include<iostream>
+using namespace std;
+
+int main()
+
+{
+    cout << "Bhavya's Code\n";
+    cout << "...................\n";
+    int n;
+    int arr[100];
+    cout << "Number of element in array: ";
+    cin>>n;
+    cout << "Elements of array: ";
+    for(int i=0;i<n;i++)
+    {
+        cin>>arr[i];
+    }
+    cout << "Original Array: \n" ;
+    for(int i=0;i<n;i++)
+    {
+        cout<<arr[i]<<" ";
+    }
+    for(int i=0;i<n/2;i++)
+    {
+        int temp;
+        temp=arr[i];
+        arr[i]=arr[n-1-i];
+        arr[n-1-i]=temp;
+    }
+    cout << "\nReversed Array: \n";
+    for(int i=0;i<n;i++)
+    {
+        cout<<arr[i]<<" ";
+    }
+    return 0;
+}
